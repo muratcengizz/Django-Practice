@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+
+
+{% block css_files %}
+<link rel="stylesheet" href="static/css/styles.css">
+{% endblock %} 
+
+
+
+
+
+
+{% block content %}
+
+<div class='container'>
+    <div class='row'>
+        <div class='col'>
+            {% for element in datas %}
+                    <a class='btn btn-primary' href="{{ element }}">{{ element }}</a>
+            {%endfor%}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

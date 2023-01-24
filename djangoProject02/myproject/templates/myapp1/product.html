@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+
+<h1>{{ namee|capfirst }}</h1>
+
+{% if productsNames|length > 0 %}
+    <ul>
+    {% for element in productsNames %}
+        {{ element }}
+        <br>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Ürün Mevcut Değil!</p>
+{% endif %}
+
+
+
+{% endblock%}
+
+{% block style %}
+<title>{{ namee }}</title>
+{% endblock  %}

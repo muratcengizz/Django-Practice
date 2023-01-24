@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>{{ categoryInformation|title }} Page!</h1>
+{% if categoryText|length > 0 %}
+    <div>
+        {% for element in categoryText %}
+            {{ element }}
+            <br>
+        {% endfor %}
+    </div>
+{% else %}
+    {% include 'partials/_noProduct.html' %}
+{% endif %}
+
+{% endblock %}
